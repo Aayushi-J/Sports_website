@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background: rgb(149, 240, 247);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2);
+  background-color: whitesmoke;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+header nav {
+  padding: 10px 50px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  height: 15vh;
+  border-bottom: rgb(149, 240, 247);
+  background-color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+header nav .left-section a {
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  margin-right: 30px;
+  position: relative;
+}
+
+h3 {
+  margin-left: 20px;
+}
+
+header nav a {
+  font-size: small;
+  transition: 0.3s ease-in-out;
+}
+
+header nav a:hover {
+  color: #39cefc;
+}
+
+header nav .right-section {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+header nav .left-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-weight: 1000;
+  font-size: 30px;
+  cursor: pointer;
+  width: 80px;
+  color: #000;
+}
+
+.logo-dot {
+  color: #000000;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.wrapper{
+  width: 940px; 
+  margin: 0 auto;
+  }
+  .wrapper ul{
+  list-style: none;
+  margin-top: rgb(82, 216, 250);
+  }
+  .wrapper ul li {
+  background: rgb(79, 249, 255);
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  color: rgb(83, 74, 207);
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  }
+  .wrapper ul li:hover{
+  background: rgb(2, 1, 12); 
+  }
+
+  .SignUp {
+  padding: 10px 15px;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.SignUp:hover {
+  background: #070616;
+}
+
+.SignIn {
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  color: rgb(71, 71, 71);
+  transition: 0.3s ease-in-out;
+}
+
+.SignIn:hover {
+  color: #020107;
+}
+
+.card:hover {
+  background-color: #7499ff;
+  color: white;
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo"><a href ="D:\WWE\Sportswebsite.html">SportCSE<span class="logo-dot">.</span></a></div>
+        <div class="wrapper">
+          <ul>
+      <li> <a href = "D:\WWE\champions.html">Champions  </a>
+      </li>
+      <li> <a href = "D:\WWE\ppvs.html"> Pay-Per-views</a>
+      </li>
+      <li> <a href = "D:\WWE\championship.html">
+        Roster
+      </a>
+      </li>
+      <li> <a href="D:\WWE\Sportswebsite.html"> Go Back </a></li>
+          </ul>
+      </div>
+      <div class="right-section">
+        <h3 class="SignIn"> <a href = "D:\WWE\editorsss.html">About</a></h3>
+        <h3 class="SignUp"><a href = "D:\WWE\editors.html">Editors</a></h3>
+      </div>
+    </nav>
+    <hr />
+  </header>
+
+  <h2 style="color: red;"> WWE RAW </h2>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="D:\WWE\Roman Reigns.png" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Roman Reigns</h2>
+        <p class="title">WWE Champion</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="D:\WWE\Bianca Blair.png" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Bianca Belair</h2>
+        <p class="title">RAW Women's Champion </p>
+        
+      </div>
+    </div>
+  </div>
+  
+<div class="column">
+    <div class="card">
+      <img src="D:\WWE\Austin Theory.png" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Austin Theory</h2>
+        <p class="title">United States Champion</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="D:\WWE\Randy Orton.png" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Randy Orton</h2>
+          <p>RK-Bro</p>
+          <p class="title">Raw Tag Team Champions</p>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="column">
+        <div class="card">
+          <img src="D:\WWE\Riddle.png" alt="Jane" style="width:100%">
+          <div class="container">
+            <h2>Riddle</h2>
+            <p>RK-Bro</p>
+            <p class="title">Raw Tag Team Champions</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+<h2 style="color: rgb(47, 0, 255);"> WWE SMACKDOWN </h2>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="D:\WWE\Roman Reigns.png" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Roman Reigns</h2>
+        <p class="title">Universal Champion</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+    <img src="D:\WWE\Charlotte Flair.png" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Charlotte Flair</h2>
+        <p class="title">Smackdown Women's Champion </p>
+        
+      </div>
+    </div>
+  </div>
+  
+<div class="column">
+    <div class="card">
+      <img src="D:\WWE\Ricochet.png"alt="John" style="width:100%">
+      <div class="container">
+        <h2>Ricochet</h2>
+        <p class="title">Intercontinental Champion</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src= "D:\WWE\Jimmy Uso.png" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Jimmy Uso</h2>
+          <p>Usos</p>
+          <p class="title">Smackdown Tag Team Champions</p>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="column">
+        <div class="card">
+          <img src= "D:\WWE\Jey Uso.png" alt="Jane" style="width:100%">
+          <div class="container">
+            <h2>Jey Uso</h2>
+            <p>Usos</p>
+            <p class="title">Smackdown Tag Team Champions</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+<h2 style="color: rgb(255, 94, 0);"> WWE NXT </h2>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="D:\WWE\Bron Breakker.png" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Bron Breakker</h2>
+        <p class="title">NXT Champion</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="D:\WWE\Becky Lynch.png" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Becky Lynch</h2>
+        <p class="title">NXT Women's Champion </p>
+        
+      </div>
+    </div>
+  </div>
+  
+<div class="column">
+    <div class="card">
+      <img src="D:\WWE\Cameron Grimes.png" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Cameron Grimes</h2>
+        <p class="title">North American Champion</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="D:\WWE\Sam Stroker.png" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Sam Stroker</h2>
+          <p>Pretty Deadly</p>
+          <p class="title">NXT Tag Team Champions</p>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="column">
+        <div class="card">
+          <img src="D:\WWE\Kit Wilson.png" alt="Jane" style="width:100%">
+          <div class="container">
+            <h2>Kit Wilson</h2>
+            <p>Pretty Deadly</p>
+            <p class="title">NXT Tag Team Champions</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+</body>
+</html>
