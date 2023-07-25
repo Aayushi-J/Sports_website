@@ -1,0 +1,348 @@
+<html>
+    <head>
+        <title>Statistics</title>
+        <style type="text/css">
+            *{
+             margin: 0px;
+             padding: 0px;
+            }
+            body{
+             font-family: arial;
+             margin-left: 2%;
+            }
+            .main{
+            
+             margin: 2%;
+            }
+            
+            .card{
+                 width: 20%;
+                 display: inline-block;
+                 box-shadow: 2px 2px 20px black;
+                 border-radius: 5px; 
+                 margin: 2%;
+                 background: linear-gradient(#a190fe 0%, #f66eeb 100%);
+                }
+                .card:hover
+{
+    background-color: #4f32f865;
+  color: rgb(72, 8, 248);
+    transform: translateY(-40px);
+  transition: 0.5s;
+  box-shadow: 0 10px 40px rgba(255, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+            
+            .image img{
+              width: 100%;
+              border-top-right-radius: 5px;
+              border-top-left-radius: 5px;
+              height:40%;         
+            
+             
+             }
+            
+            .title{
+             
+              text-align: center;
+              padding: 10px;
+              
+             }
+            
+            h1{
+              font-size: 20px;
+             }
+             a{
+                text-decoration: none;
+             }
+            
+            .des{
+              padding: 3px;
+              text-align: center;
+             
+              padding-top: 10px;
+                    border-bottom-right-radius: 5px;
+              border-bottom-left-radius: 5px;
+            }
+            button{
+              margin-top: 40px;
+              margin-bottom: 10px;
+              background-color: white;
+              border: 1px solid black;
+              border-radius: 5px;
+              padding:10px;
+              text-decoration: #f66eeb;
+            }
+            button:hover{
+              background-color: rgb(249, 155, 14);
+              color: white;
+              transition: .5s;
+              cursor: pointer;
+            }
+            header nav {
+  padding: 10px 50px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  height: 15vh;
+  border-bottom: rgb(149, 240, 247);
+  background-color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+header nav .left-section a {
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  margin-right: 30px;
+  position: relative;
+}
+
+header nav a {
+  font-size: small;
+  transition: 0.3s ease-in-out;
+}
+
+header nav a:hover {
+  color: #39cefc;
+}
+
+header nav .right-section {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+header nav .left-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-weight: 1000;
+  font-size: 30px;
+  cursor: pointer;
+  width: 80px;
+  color: rgb(255, 255, 255);
+}
+
+.logo-dot {
+  color: #000000;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.wrapper{
+  width: 940px; 
+  margin: 0 auto;
+  }
+  .wrapper ul{
+  list-style: none;
+  margin-top: rgb(82, 216, 250);
+  }
+  .wrapper ul li {
+  background: rgb(255, 255, 255);
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  color: rgb(83, 74, 207);
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  }
+  .wrapper ul li:hover{
+  background: rgb(2, 1, 12); 
+  }
+
+  .SignUp {
+  padding: 10px 15px;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.SignUp:hover {
+  background: #070616;
+}
+
+.SignIn {
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  color: rgb(71, 71, 71);
+  transition: 0.3s ease-in-out;
+}
+
+.SignIn:hover {
+  color: #020107;
+}
+        
+            </style>
+    </head>
+    <body>
+      <header>
+         <nav>
+           <div class="logo"><a href = "D:\WWE\Sportswebsite.html" style="text-decoration: none;"><h2>SportCSE<span class="logo-dot">.</h2></span></a></div>
+             <div class="wrapper">
+               <ul>
+           <li> <a href = "D:\Cricket\squad.html" style="text-decoration: none;">SQUAD</a>
+           </li>
+           <li> <a href = "D:\Cricket\pointstable.html" style="text-decoration: none;"> POINTS TABLE</a>
+           </li>
+           <li><a href = "D:\Cricket\Stats.html" style="text-decoration: none;">STATISTICS</a>
+           </li>
+           <li><a href = "D:\Crickethome.html" style="text-decoration: none;">GO BACK</a></li>
+               </ul>
+           </div>
+           <div class="right-section">
+             <h3 class="SignIn">About</h3>
+             <h3 class="SignUp">Editors</h3>
+           </div>
+         </nav>
+         <hr />
+       </header>
+        <div class="main">           
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\JButtler.png">
+           </div>
+           <div class="title">
+            <h1>
+           HIGHEST SCORE</h1>
+           </div>
+           <div class="des">
+            <p>Player: Jos Buttler</p><br>
+            <p>Score: 116</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           </div>
+           </div>
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\AMarkram.png">
+           </div>
+           <div class="title">
+            <h1>
+           BEST BATTING AVERAGE</h1>
+           </div>
+           <div class="des">
+            <p>Player: Aidan Markram</p><br>
+            <p>Average: 76.25</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           </div>
+           </div>
+           
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\PCummins.png">
+           </div>
+           <div class="title">
+            <h1>
+           BEST STRIKE RATE</h1>
+           </div>
+           <div class="des">
+            <p>Player: Pat Cummins</p><br>
+            <p>S.Rate: 286.36</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           </div>
+        </div>          
+           
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\DWarner.png">
+           </div>
+           <div class="title">
+            <h1>
+           MOST FIFTIES</h1>
+           </div>
+           <div class="des">
+            <p>Player: David Warner</p><br>
+            <p>50s: 04</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           </div>
+           </div>
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\UMalik.png">
+           </div>
+           <div class="title">
+            <h1>
+            BEST PERFORMER</h1>
+           </div>
+           <div class="des">
+            <p>Player: Umran Malik</p><br>
+            <p>BBI: 05</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           </div>
+           </div>
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\YChahal.png">
+           </div>
+           <div class="title">
+            <h1>
+           LEADING WICKET TAKER</h1>
+           </div>
+           <div class="des">
+            <p>Player: Yuzvendra Chahal</p><br>
+            <p>Wickets: 19</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           </div>
+        </div>           
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\ABadoni.webp">
+           </div>
+           <div class="title">
+            <h1>
+           BEST BOWLING AVERAGE</h1>
+           </div>
+           <div class="des">
+            <p>Player: Ayush Badoni</p><br>
+            <p>Average: 6.00</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           
+           </div>
+           </div>
+                      
+           <div class="card">
+           
+           <div class="image">
+              <img src="D:\Cricket\KKartikeya.webp">
+           </div>
+           <div class="title">
+            <h1>
+           MOST ECONOMICAL</h1>
+           </div>
+           <div class="des">
+            <p>Player: Kumar Kartikeya</p><br>
+            <p>Economy: 4.75</p>
+           <button><a href="https://sports.ndtv.com/ipl-2022/stats">Read More</a></button>
+           </div>
+           </div>
+           </div>
+    </body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+    const userCardTemplate = document.querySelector("[data-user-template]")
+const userCardContainer = document.querySelector("[data-user-cards-container]")
+const searchInput = document.querySelector("[data-search]")
+
+let users = []
+
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.toLowerCase()
+  users.forEach(user => {
+    const isVisible =
+      user.name.toLowerCase().includes(value) ||
+      user.email.toLowerCase().includes(value)
+    user.element.classList.toggle("hide", !isVisible)
+  })
+})
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(res => res.json())
+  .then(data => {
+    users = data.map(user => {
+      const card = userCardTemplate.content.cloneNode(true).children[0]
+      const header = card.querySelector("[data-header]")
+      const body = card.querySelector("[data-body]")
+      header.textContent = user.name
+      body.textContent = user.email
+      userCardContainer.append(card)
+      return { name: user.name, email: user.email, element: card }
+    })
+  })
+  </script>
+    <meta charset="UTF-8">
+    <title>Squad</title>
+    <link rel="stylesheet" href="sportsweb.css">
+    <style>
+        
+        .search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid black;
+  background-color: white;
+  padding: .5rem;
+}
+
+
+.card > .header {
+  margin-bottom: .25rem;
+}
+
+.card > .body {
+  font-size: .8rem;
+  color: #777;
+}
+
+.hide {
+  display: none;
+}
+        
+        body{
+
+    background: linear-gradient(#a0faf5 0%, #fe93f5 100%);
+}
+
+.wrapper1{
+    background: rgb(255, 255, 253);
+    width: 1000px;
+    height: 350px;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+.tablea1{
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 15%;
+}
+h2{
+    text-align: center;
+}
+.hr1{
+    width: 100px;
+    margin: 10px auto;
+}
+.members{
+    display: flex;
+}
+.team-mem{
+    margin: 8px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+td{
+    text-align: center;
+}
+h4,p{
+    text-align: center;
+    font-size: 12px;
+    margin: 7px;
+}
+.ax:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ax:hover, a:active {
+  background-color: blue;
+}
+.logo {
+  font-weight: 1000;
+  font-size: 30px;
+  cursor: pointer;
+  width: 80px;
+  color: #000;
+}
+
+.logo-dot {
+  color: #000000;
+}
+.wrapperabcd{
+  width: 940px; 
+  margin: 0 auto;
+  }
+  .wrapperabcd ul{
+  list-style: none;
+  margin-top: rgb(82, 216, 250);
+  }
+  .wrapperabcd ul li {
+  background: rgb(79, 249, 255);
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  color: rgb(83, 74, 207);
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  }
+  .wrapperabcd ul li:hover{
+  background: rgb(2, 1, 12); 
+  }
+
+  .SignUp {
+  padding: 10px 15px;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.SignUp:hover {
+  background: #070616;
+}
+
+.SignIn {
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  color: rgb(71, 71, 71);
+  transition: 0.3s ease-in-out;
+}
+
+.SignIn:hover {
+  color: #020107;
+}
+header nav {
+  padding: 10px 50px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  height: 15vh;
+  border-bottom: rgb(149, 240, 247);
+  background-color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+header nav .left-section a {
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  margin-right: 30px;
+  position: relative;
+}
+header nav a {
+  font-size: small;
+  transition: 0.3s ease-in-out;
+}
+
+header nav a:hover {
+  color: #39cefc;
+}
+
+header nav .right-section {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+header nav .left-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+font{
+    color: rgb(22, 1, 160);
+}
+.bg-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+  .bg-video{
+    width: 0%;
+    height: auto;
+    box-sizing: border-box;
+
+  }
+}
+@media(max-aspect-ratio: 16/9){
+  .bg-video{
+    width: auto;
+    height: 0%;
+    box-sizing: border-box;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo"><a href = "D:\WWE\Sportswebsite.html" style="text-decoration: none;"><h2>SportCSE<span class="logo-dot">.</h2></span></a></div>
+            <div class="wrapperabcd">
+              <ul>
+          <li> <a href = "D:\Cricket\pointstable.html" style="text-decoration: none;"><font>POINTSTABLE</font></a>
+          </li>
+          <li> <a href = "D:\Cricket\Stats.html" style="text-decoration: none;"><font>STATISTICS</font></a>
+          </li>
+          <li><a href = "D:\Cricket\squad.html" style="text-decoration: none;"><font>SQUAD</font></a>
+          </li>
+          <li><a href = "D:\Crickethome.html" style="text-decoration: none;"><font>GO BACK</font></a></li>
+              </ul>
+          </div>
+          <div class="right-section">
+            <h3 class="SignIn">About</h3>
+            <h3 class="SignUp">Editors</h3>
+          </div>
+        </nav>
+        <hr />
+      </header>
+      <div class="search-wrapper">
+        <label for="search"><b>Search Users</b></label>
+        <input type="search" id="search" data-search>
+      </div>
+      <div class="user-cards" data-user-cards-container></div>
+      <template data-user-template>
+        <div class="card">
+          <div class="header" data-header></div>
+          <div class="body" data-body></div>
+        </div>
+      </template>
+    <table class="tablea1" cellspacing="10%" cellpadding="10%">
+        <tr>
+            <td>
+    <div class="wrapper1">
+        <h2>Royal Challengers Bangalore</h2>
+        <hr width="20px" height="5px" color="red">
+        <br>
+        <div class="members">
+            <table>
+                <tr>
+                    <td width="20%">
+                        <div class="team-mem">
+                            <img src="D:\Cricket\du plesis.png">
+                            <h4>Faf Du Plessis</h4>
+                            <p>Batsman</p>
+                        </div>
+                    </td>
+                    <td width="20%">
+                        <div class="team-mem">
+                            <img src="D:\Cricket\Glenn Maxwell.png">
+                            <h4>Glenn Maxwell</h4>
+                            <p>All-Rounder</p>
+                        </div>
+                    </td>
+                    <td width="20%">
+                        <div class="team-mem">
+                            <img src="D:\Cricket\vkohli.png">
+                            <h4>Virat Kohli</h4>
+                            <p>Batsman</p>
+                        </div>
+                    </td>
+                    <td width="20%">
+                        <div class="team-mem">
+                            <img src="D:\Cricket\Shahbaz Ahmed.png">
+                            <h4>Shahbaz Ahmed</h4>
+                            <p>All-Rounder</p>
+                        </div>
+                    </td>
+                    <td width="20%">
+                        <div class="team-mem">
+                            <img src="D:\Cricket\dineshk.png">
+                            <h4>Dinesh Kartik</h4>
+                            <p>Batsman</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="team-mem">
+                            <img src="D:\Cricket\Harshal Patel.png">
+                            <h4>Harshal Patel</h4>
+                            <p>Bowler</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="team-mem">
+                            <img src="D:\Cricket\Mohammed Siraj.png">
+                            <h4>Mohammed Siraj</h4>
+                            <p>Bowler</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr width="100%">
+                    <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                </tr>
+                <tr width="100%">
+                    <td colspan="7" width="100%"><a class="ax" href="https://www.royalchallengers.com/rcb-squad" target="_blank">Click to view more</a></td>
+                </tr>
+                </table>
+            </tr>
+            <tr>
+                <td>
+                    <div class="wrapper1">
+                        <h2>Mumbai Indians</h2>
+                        <hr width="20px" height="5px" color="red">
+                        <br>
+                        <div class="members">
+                            <table>
+                                <tr>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\RSharma.webp">
+                                            <h4>Rohit Sharma</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\RYadav.webp">
+                                            <h4>R Sanjay Yadav</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\SYadav.webp">
+                                            <h4>Surya K Yadav</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\KPollard.webp">
+                                            <h4>Kieron Pollard</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\ASingh.webp">
+                                            <h4>Anmolpreet Singh</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\JBumrah.webp">
+                                            <h4>Jasprit Bumrah</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\ATendulkar.webp">
+                                            <h4>Arjun Tendulkar</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><a class="ax" href=https://www.mumbaiindians.com/players target="_blank">Click to view more</a></td>
+                                </tr>
+                            </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="wrapper1">
+                        <h2>Chennai Super Kings</h2>
+                        <hr width="20px" height="5px" color="red">
+                        <br>
+                        <div class="members">
+                            <table>
+                                <tr>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\MSD.png">
+                                            <h4>Mahendra S Dhoni</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\RJadeja.png">
+                                            <h4>Ravindra Jadeja</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\ARayudu.png">
+                                            <h4>Surya K Yadav</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\DBravo.png">
+                                            <h4>Dwayne Bravo</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\RUtthapa.png">
+                                            <h4>Robin Utthapa</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\DChahar.png">
+                                            <h4>Deepak Chahar</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\AMilne.png">
+                                            <h4>Adam Milne</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><a class="ax" href=https://www.chennaisuperkings.com/module/news/html/team-page.html target="_blank">Click to view more</a></td>
+                                </tr>
+                                </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="wrapper1">
+                        <h2>Delhi Capitals</h2>
+                        <hr width="20px" height="5px" color="red">
+                        <br>
+                        <div class="members">
+                            <table>
+                                <tr>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\RPant.png">
+                                            <h4>Rishabh Pant</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\APatel.png">
+                                            <h4>Axar Patel</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\PShaw.png">
+                                            <h4>Prithvi Shaw</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\LYadav.png">
+                                            <h4>Lalit Yadav</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\SKhan.png">
+                                            <h4>Sarfaraz Khan</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\KYadav.png">
+                                            <h4>Kuldeep Yadav</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\SThakur.png">
+                                            <h4>Shardul Thakur</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><a class="ax" href=https://www.delhicapitals.in/players target="_blank">Click to view more</a></td>
+                                </tr>
+                                </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="wrapper1">
+                        <h2>Kolkata Knight Riders</h2>
+                        <hr width="20px" height="5px" color="red">
+                        <br>
+                        <div class="members">
+                            <table>
+                                <tr>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\SIyer.png">
+                                            <h4>Shreyas Iyer</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\ARussell.png">
+                                            <h4>Andrew Russell</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\ARahane.png">
+                                            <h4>Ajinkya Rahane</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\VIyer.png">
+                                            <h4>Venkatesh Iyer</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\AFinch.png">
+                                            <h4>Aaron Finch</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\UYadav.png">
+                                            <h4>Umesh Yadav</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\TSouthee.png">
+                                            <h4>Tim Southee</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><a class="ax" href=https://www.kkr.in/players target="_blank">Click to view more</a></td>
+                                </tr>
+                            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="wrapper1">
+                    <h2>Gujarat Tigers</h2>
+                    <hr width="20px" height="5px" color="red">
+                    <br>
+                    <div class="members">
+                        <table>
+                            <tr>
+                                <td width="20%">
+                                    <div class="team-mem">
+                                        <img src="D:\Cricket\DMiller.webp">
+                                        <h4>David Miller</h4>
+                                        <p>Batsman</p>
+                                    </div>
+                                </td>
+                                <td width="20%">
+                                    <div class="team-mem">
+                                        <img src="D:\Cricket\HPandya.webp">
+                                        <h4>Hardik Pandya</h4>
+                                        <p>All-Rounder</p>
+                                    </div>
+                                </td>
+                                <td width="20%">
+                                    <div class="team-mem">
+                                        <img src="D:\Cricket\SSudharsan.webp">
+                                        <h4>Sai Sudharsan</h4>
+                                        <p>Batsman</p>
+                                    </div>
+                                </td>
+                                <td width="20%">
+                                    <div class="team-mem">
+                                        <img src="D:\Cricket\VShankar.webp">
+                                        <h4>Vijay Shankar</h4>
+                                        <p>All-Rounder</p>
+                                    </div>
+                                </td>
+                                <td width="20%">
+                                    <div class="team-mem">
+                                        <img src="D:\Cricket\SGill.webp">
+                                        <h4>Subhman Gill</h4>
+                                        <p>Batsman</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="team-mem">
+                                        <img src="D:\Cricket\MShami.webp">
+                                        <h4>Mohammad Shami</h4>
+                                        <p>Bowler</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="team-mem">
+                                        <img src="D:\Cricket\RKhan.webp">
+                                        <h4>Rashid Khan</h4>
+                                        <p>Bowler</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr width="100%">
+                                <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                            </tr>
+                            <tr width="100%">
+                                <td colspan="7" width="100%"><a class="ax" href=https://www.gujarattitansipl.com/players target="_blank">Click to view more</a></td>
+                            </tr>
+                        </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="wrapper1">
+                <h2>Lucknow Super Giants</h2>
+                <hr width="20px" height="5px" color="red">
+                <br>
+                <div class="members">
+                    <table>
+                        <tr>
+                            <td width="20%">
+                                <div class="team-mem">
+                                    <img src="D:\Cricket\MPandey.webp">
+                                    <h4>Manish Pandey</h4>
+                                    <p>Batsman</p>
+                                </div>
+                            </td>
+                            <td width="20%">
+                                <div class="team-mem">
+                                    <img src="D:\Cricket\JHolder.webp">
+                                    <h4>Jason Holder</h4>
+                                    <p>All-Rounder</p>
+                                </div>
+                            </td>
+                            <td width="20%">
+                                <div class="team-mem">
+                                    <img src="D:\Cricket\KRahul.webp">
+                                    <h4>K L Rahul</h4>
+                                    <p>Batsman</p>
+                                </div>
+                            </td>
+                            <td width="20%">
+                                <div class="team-mem">
+                                    <img src="D:\Cricket\DHooda.webp">
+                                    <h4>Deepak Hooda</h4>
+                                    <p>All-Rounder</p>
+                                </div>
+                            </td>
+                            <td width="20%">
+                                <div class="team-mem">
+                                    <img src="D:\Cricket\QKock.webp">
+                                    <h4>Quinton de Kock</h4>
+                                    <p>Batsman</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="team-mem">
+                                    <img src="D:\Cricket\MKhan.webp">
+                                    <h4>Mohsin Khan</h4>
+                                    <p>Bowler</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="team-mem">
+                                    <img src="D:\Cricket\DChameera.webp">
+                                    <h4>Dushmantha Chameera</h4>
+                                    <p>Bowler</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr width="100%">
+                            <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                        </tr>
+                        <tr width="100%">
+                            <td colspan="7" width="100%"><a class="ax" href=https://www.iplt20.com/teams/lucknow-super-giants/squad target="_blank">Click to view more</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="wrapper1">
+                        <h2>Rajasthan Royals</h2>
+                        <hr width="20px" height="5px" color="red">
+                        <br>
+                        <div class="members">
+                            <table>
+                                <tr>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\DPadikkal.png">
+                                            <h4>Devdutt Padikkal</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\RAshwin.png">
+                                            <h4>Ravichandran Ashwin</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\RParag.png">
+                                            <h4>Riyan Parag</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\JNeesham.png">
+                                            <h4>James Neesham</h4>
+                                            <p>All-Rounder</p>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\JButtler.png">
+                                            <h4>James Buttler</h4>
+                                            <p>Batsman</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\YChahal.png">
+                                            <h4>Yuzvendra Chahal</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="team-mem">
+                                            <img src="D:\Cricket\TBoult.png">
+                                            <h4>Trent Boult</h4>
+                                            <p>Bowler</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><font color="white">.......................................</font></td>
+                                </tr>
+                                <tr width="100%">
+                                    <td colspan="7" width="100%"><a class="ax" href=https://www.rajasthanroyals.com/players target="_blank">Click to view more</a></td>
+                                </tr>
+                            </table>
+                    </td>
+                </tr>
+            </table> 
+    </table> 
+</body>
+</html>
