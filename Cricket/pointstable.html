@@ -1,0 +1,357 @@
+<html>
+    <head>
+        <title>
+            Points Table
+        </title>
+        <style>
+            .styled-table {
+              border-collapse: collapse;
+              margin: 25px 0;
+              font-size: 0.9em;
+              font-family: sans-serif;
+              min-width: 600px;
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+              margin-left: 400px;
+            }
+            .styled-table thead tr {
+              background-color: #199800;
+              color: #ffffff;
+              text-align: left;
+            }
+            .styled-table th,
+            .styled-table td {
+              padding: 12px 15px;
+            }
+            .styled-table tbody tr {
+              border-bottom: 1px solid #fdd6d6;
+            }
+        
+            .styled-table tbody tr:nth-of-type(even) {
+              background-color: #ffffff;
+            }
+        
+            .styled-table tbody tr:last-of-type {
+              border-bottom: 2px solid #009879;
+            }
+            .styled-table tbody tr.active-row {
+              font-weight: bold;
+              color:rgb(182, 229, 252);
+              background-color:darkblue;
+            }
+
+        .title {
+  color: rgb(255, 255, 255);
+}
+.container {
+          position: relative;
+          max-width: 700px;
+          margin: 0 auto; 
+        }
+        
+        .container .content {
+            position: absolute;
+            background: rgb(49, 49, 49);
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 95%;
+            padding: 20px;
+            text-align: center;
+            top: 264px;
+            align-self: center;
+            font-size: xx-large;
+        }
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+header nav {
+  padding: 10px 50px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  height: 15vh;
+  border-bottom: rgb(149, 240, 247);
+  background-color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+header nav .left-section a {
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  margin-right: 30px;
+  position: relative;
+}
+
+header nav a {
+  font-size: small;
+  transition: 0.3s ease-in-out;
+}
+
+header nav a:hover {
+  color: #39cefc;
+}
+
+header nav .right-section {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+header nav .left-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-weight: 1000;
+  font-size: 30px;
+  cursor: pointer;
+  width: 80px;
+  color: rgb(255, 255, 255);
+}
+
+.logo-dot {
+  color: #000000;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.wrapper{
+  width: 940px; 
+  margin: 0 auto;
+  }
+  .wrapper ul{
+  list-style: none;
+  margin-top: rgb(82, 216, 250);
+  }
+  .wrapper ul li {
+  background: rgb(255, 255, 255);
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  color: rgb(83, 74, 207);
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  }
+  .wrapper ul li:hover{
+  background: rgb(2, 1, 12); 
+  }
+
+  .SignUp {
+  padding: 10px 15px;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.SignUp:hover {
+  background: #070616;
+}
+
+.SignIn {
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  color: rgb(71, 71, 71);
+  transition: 0.3s ease-in-out;
+}
+
+.SignIn:hover {
+  color: #020107;
+}
+.bg-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+  .bg-video{
+    width: 0%;
+    height: auto;
+    box-sizing: border-box;
+
+  }
+}
+@media(max-aspect-ratio: 16/9){
+  .bg-video{
+    width: auto;
+    height: 0%;
+    box-sizing: border-box;
+  }
+}
+
+      </style>
+    </head>
+    <body background="D:\Cricket\795cabc4647f73b365e2e6eabd0f34dc.png">
+      <header>
+        <nav>
+          <div class="logo"><a href = "D:\WWE\Sportswebsite.html" style="text-decoration: none;"><h2>SportCSE<span class="logo-dot">.</h2></span></a></div>
+            <div class="wrapper">
+              <ul>
+          <li> <a href = "D:\Cricket\squad.html" style="text-decoration: none;">SQUAD</a>
+          </li>
+          <li> <a href = "D:\Cricket\pointstable.html" style="text-decoration: none;"> POINTS TABLE</a>
+          </li>
+          <li><a href = "D:\Cricket\Stats.html" style="text-decoration: none;">STATISTICS</a>
+          </li>
+          <li><a href = "D:\Crickethome.html" style="text-decoration: none;">GO BACK</a></li>
+              </ul>
+          </div>
+          <div class="right-section">
+            <h3 class="SignIn"><a href ="D:\WWE\editorsss.html">About</a></h3>
+            <h3 class="SignUp">Editors</h3>
+          </div>
+        </nav>
+        <hr />
+      </header>
+      <div class="container">
+        <img src="D:/Cricket/IPL.png" alt="Notebook" style="width:100%;">
+        <div class="content">
+          <h3>IPL POINTS TABLE - 2022</h3>
+        </div>
+        </div>
+<table class="styled-table">
+  <thead> 
+    <tr>
+      <th>RANK</th>  
+      <th>TEAM</th>
+      <th>PLAYED</th>
+      <th>WON</th>
+      <th>LOST</th>
+      <th>NET RR</th>
+      <th>POINTS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active-row">
+      <td>1</td>  
+      <td>
+        <img src="D:\Cricket\GTitan.png" height=60 width=90></img>
+      </td>
+      <td>10</td>
+      <td>8</td>
+      <td>2</td>
+      <td>+0.158</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>2</td>  
+      <td><img src="D:\Cricket\LGiants.webp" height=60 width=90></img>
+      </td>
+      <td>10</td>
+      <td>7</td>
+      <td>3</td>
+      <td>+0.397</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>3</td> 
+      <td><img src="D:\Cricket\RRoyals.jpg" height=60 width=90></img>
+      </td>
+      <td>10</td>
+      <td>6</td>
+      <td>4</td>
+      <td>+0.340</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>4</td>  
+      <td><img src="D:\Cricket\RChallengers.png" height=60 width=80></img></td>
+      <td>11</td>
+      <td>6</td>
+      <td>5</td>
+      <td>-0.444</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>5</td>  
+      <td><img src="D:\Cricket\DCapitals.png" height=60 width=90></img>
+      </td>
+      <td>10</td>
+      <td>5</td>
+      <td>5</td>
+      <td>+0.641</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>6</td>  
+      <td><img src="D:\Cricket\SHyderabad.png" height=60 width=90></img></td>
+      <td>10</td>
+      <td>5</td>
+      <td>5</td>
+      <td>+0.325</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>7</td>  
+      <td><img src="D:\Cricket\KPunjab.png" height=60 width=90></img>
+      </td>
+      <td>10</td>
+      <td>5</td>
+      <td>5</td>
+      <td>-0.229</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>8</td>  
+      <td><img src="D:\Cricket\KRiders.png" height=60 width=90></img>
+      </td>
+      <td>10</td>
+      <td>4</td>
+      <td>6</td>
+      <td>+0.060</td>
+      <td>8</td>
+    </tr>
+    <tr>
+        <td>9</td>  
+        <td><img src="D:\Cricket\CKings.png" height=60 width=90></img>
+        </td>
+        <td>10</td>
+        <td>3</td>
+        <td>7</td>
+        <td>-0.431</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>10</td>  
+        <td><img src="D:\Cricket\MIndian.png" height=60 width=90></img>
+        </td>
+        <td>09</td>
+        <td>1</td>
+        <td>8</td>
+        <td>-0.836</td>
+        <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>          
+    </body>
+</html>

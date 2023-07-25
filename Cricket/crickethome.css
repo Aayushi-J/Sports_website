@@ -1,0 +1,230 @@
+main{
+    width: 95%; margin: 15px auto; 
+    height: 300%;
+    border:0px solid grey;
+    display: grid; color: white;
+    grid-template-rows: 120px 100px 200px 120px;
+    grid-template-columns: repeat(3, 1fr) 150px;
+    grid-gap: 12px;
+    
+   }
+   .maincontainer{
+     position: absolute;
+     width: 250px;
+     height: 320px;
+     background: none;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+   
+   }
+    .div1{ background-color: #ffbcc1; 
+     grid-column: 1/-1;
+     height: 90%
+    }
+    .div2{ background-color: #b7ffd5; border-radius: 10px; border-style: double; border-color: #a30d15;}
+    .div3{ background-color: #acd1f7; border-radius: 10px; border-style: double; border-color: #a30d15;}
+    .div4{ background-color: #a2a2ca; border-radius: 10px; border-style: double; border-color: #a30d15;}
+    .div5{ background-color: #6792e7; 
+     grid-row:2/4; grid-column: 4/5;
+    }
+    .div6{ background-color: #eacd96; 
+     grid-column: 1/ 4;
+    }
+    .div7{ background-color: #cff789;
+     grid-column: 1/-1;
+     }
+   .dropbtn {
+     background-color: #a30d15;
+     color: white;
+     padding: 16px;
+     font-size: 16px;
+     border-style: none;
+   }
+   
+   .dropdown {
+     position: relative;
+     display: inline-block;
+   }
+   
+   .dropdown:hover .dropdown-content {display: block;}
+   
+   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+   input[type=text], input[type=password] {
+     width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     box-sizing: border-box;
+   }
+   
+   button {
+     background-color: #20aaf4;
+     color: white;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     cursor: pointer;
+     width: 100%;
+   }
+   
+   button:hover {
+     opacity: 0.8;
+   }
+   
+   .cancelbtn {
+     width: auto;
+     padding: 10px 18px;
+     background-color: #f44336;
+   }
+   
+   .imgcontainer {
+     text-align: center;
+     margin: 24px 0 12px 0;
+     position: relative;
+   }
+   
+   img.avatar {
+     width: 40%;
+     border-radius: 50%;
+   }
+   
+   .container {
+     padding: 16px;
+   }
+   
+   span.psw {
+     float: right;
+     padding-top: 16px;
+   }
+   
+   .modal {
+     display: none; 
+     position: fixed; 
+     z-index: 1; 
+     left: 0;
+     top: 0;
+     width: 100%; 
+     height: 100%;  
+     background-color: rgb(0,0,0);
+     background-color: rgba(0,0,0,0.4); 
+     padding-top: 60px;
+   }
+   
+   .modal-content {
+     background-color: #fefefe;
+     margin: 5% auto 15% auto; 
+     border: 1px solid #888;
+     width: 50%;
+   }
+   
+   .close {
+     position: absolute;
+     right: 25px;
+     top: 0;
+     color: #000;
+     font-size: 35px;
+     font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: red;
+     cursor: pointer;
+   }
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+   
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+   }
+   .popup-screen{
+     z-index: 999999;
+     position: fixed;
+     background: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(10px);
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     visibility: hidden;
+     transition: 0.5s ease;
+     transition-property: visibility;
+   }
+   
+   .popup-screen.active{
+     visibility: visible;
+   }
+   
+   .popup-box{
+     position: relative;
+     background: rgba(255, 255, 255, 0.8);
+     backdrop-filter: blur(10px);
+     max-height: 700px;
+     max-width: 600px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin: 20px;
+     padding: 50px 40px;
+     border-radius: 20px;
+     box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+     transform: scale(0);
+     transition: 0.5s ease;
+     transition-property: transform;
+   }
+   
+   .popup-screen.active .popup-box{
+     transform: scale(1);
+   }
+   
+   .popup-box h2{
+     font-size: 2.1em;
+     font-weight: 800;
+     margin-bottom: 20px;
+   }
+   
+   .popup-box p{
+     font-size: 1em;
+     margin-bottom: 30px;
+   }
+   
+   .popup-box .btn{
+     color: #fff;
+     background: red;
+     font-size: 1.1em;
+     font-weight: 500;
+     text-decoration: none;
+     text-transform: uppercase;
+     padding: 7px 27px;
+     border-radius: 3px;
+   }
+   
+   .close-btn{
+     position: absolute;
+     font-size: 1em;
+     top: 0;
+     right: 0;
+     margin: 15px;
+     cursor: pointer;
+     opacity: 0.5;
+     transition: 0.3s ease;
+     transition-property: opacity;
+   }
+   
+   .close-btn:hover{
+     opacity: 1;
+   }
+   
+   section{
+     padding: 50px 100px;
+   }
+   img.jersey{
+     height: 100px;
+     width: 80px;
+   }
